@@ -1,8 +1,8 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 
-INTRO = "Hola mi nombre es Alberto Bot, gracias a mi creador Alberto, soy capaz de contestar automáticamente y tunantemente 🤣"
-EXPLANATION = "Vaya etapa más bonita que habéis vivido, he podido leer todas vuestras conversaciones. Qué cosas más bonitas os habéis dicho!!! Quieres ver las cosas que dijiste a mi creador?"
+INTRO = "****"
+EXPLANATION = "*****"
 
 
 class TreeDialog:
@@ -32,7 +32,7 @@ class TreeDialog:
 
         elif self.tree_id == 2:
             self.tree_id = 3
-            text = "Me alegra que te haya gustado, querrías ver ahora lo que él te ha dicho"
+            text = "*******"
             await update.message.reply_text(text)
 
         elif (text == "si") & (self.tree_id == 3):
@@ -43,7 +43,7 @@ class TreeDialog:
 
         elif self.tree_id == 4:
             self.tree_id = 5
-            text = "Pues esto no es todo porque también habéis vivido grande momentos, los quieres ver?"
+            text = "*****"
             await update.message.reply_text(text)
 
         elif self.tree_id == 5:
@@ -53,11 +53,11 @@ class TreeDialog:
 
         elif self.tree_id == 6:
             self.tree_id = 7
-            text = "Lo mejor de todo, es que esto solo el principio, os queda mucho futuro por delante. Pero es verdad que es muy bonito recordar aquellos días especiales. Así que para que siempre recuerdes este día, hay una sorpresa guardada en el frutero."
+            text = "*****"
             await update.message.reply_text(text)
 
         else:
-            await update.message.reply_text("Respuesta incorrecta preciosa")
+            await update.message.reply_text("Respuesta incorrecta")
 
     # Log errors
     async def error(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
